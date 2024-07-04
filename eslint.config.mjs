@@ -20,7 +20,7 @@ const compat = new FlatCompat({
 });
 
 export default [{
-    ignores: ["**/dist", "**/vite.config.ts", "**/.prettierrc.cjs", "**/.stylelintrc.cjs", "**/eslint.config.mjs"],
+    ignores: ["**/dist", "**/vite.config.ts", "**/.prettierrc.cjs", "**/.stylelintrc.cjs", "**/eslint.config.mjs", "coverage/"],
 }, ...fixupConfigRules(compat.extends(
     "airbnb",
     "airbnb-typescript",
@@ -53,7 +53,7 @@ export default [{
             },
 
             project: ["./tsconfig.json", "./tsconfig.node.json"],
-            tsconfigRootDir: "/home/moray/src/vite-react-base",
+            tsconfigRootDir: __dirname,
         },
     },
 
