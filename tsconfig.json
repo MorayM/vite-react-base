@@ -18,7 +18,22 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Custom paths */
+    /* A lot of examples use @ as a prefix, but this clashes with some external libraries sucn as @types/react */
+    "baseUrl": "src",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "context/*": ["context/*"],
+      "components/*": ["components/*"],
+      "features/*": ["features/*"],
+      "hooks/*": ["hooks/*"],
+      "services/*": ["services/*"],
+      "test/*": ["test/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

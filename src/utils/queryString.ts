@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 // { [key: string]: string | number } means any JS object that has string keys and values of the specified type
 /**
  * Creates a query string from a JS object of keys and values. If any values
