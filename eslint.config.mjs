@@ -58,17 +58,30 @@ export default [{
     },
 
     rules: {
+        // Enforcing this can cause problems with tree-shaking
+        'import/prefer-default-export': 'off',
+        // Let prettier do it's thing
         "prettier/prettier": "error",
-
+        // Vite requires this
         "react-refresh/only-export-components": ["warn", {
             allowConstantExport: true,
         }],
-
+        // Vite handles JSX automatically without the need for importing React
         "react/react-in-jsx-scope": "off",
         "react/jsx-uses-react": "off",
+        // If you're using TypeScript properly, you **shouldn't** need to enforce this
+        'react/require-default-props': 'off',
 
         '@tanstack/eslint-plugin-query/exhaustive-deps': 'error',
         '@tanstack/eslint-plugin-query/no-rest-destructuring': 'warn',
         '@tanstack/eslint-plugin-query/stable-query-client': 'error',
+        // Current W3C guidance is that `for` is the preferred way to associate labels with controls
+        'jsx-a11y/label-has-associated-control': ['error', {
+          labelComponents: [],
+          labelAttributes: [],
+          controlComponents: [],
+          assert: 'htmlFor',
+          depth: 25
+        }],
     },
 }];
