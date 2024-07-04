@@ -1,6 +1,6 @@
 # React + Vite boilerplate
 
-This is my minimal React boilerplate, focussed on adding functionality fast! No state management, just React, Router and Query.
+This is my minimal React boilerplate, focussed on adding functionality fast! No state management, just React, routing, querying and tests.
 
 ## Get Started
 
@@ -48,4 +48,4 @@ Anything that is shipped goes in the `src` folder.
 
 For smaller projects, remove the `features` folder and simply have folders for each page in the `pages` folder with their components.
 
-Everything outside of the `src` folder is configuration with the exception of the `public` folder. Anything placed in here will be made available at the root of the site. Place files like `robots.txt` in here. Files placed in here should NOT be imported into code in `src`.
+Everything outside of the `src` folder is configuration with the exception of the `public` folder. Anything placed in here will be made available at the root of the site. Place files like `robots.txt`, `sitemap.xml`, `favicon.ico` etc in here, along with any custom fonts. Files placed in here should NOT be imported into code in `src`.
