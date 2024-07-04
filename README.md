@@ -19,11 +19,18 @@ To build a bundle for deployment, run `pnpm build`. This will generate and bundl
 
 To run the linter, run `pnpm lint`. This will check all code and style files for errors. I recommend using the VSCode extensions' "Fix on Save" features instead but this script is useful for incorporating in pre-commit checks and other parts of the CI/CD pipeline.
 
+## Test
+
+Test files are placed alongside the files they test. To run all tests and start the watcher, run `pnpm run test`. This will watch for changes to tests and rerun them automatically. Alternatively, run `pnpm run test <path>` to run a specific test file or directory of test files.
+
+If a prettier output is required, run `pnpm run test:ui` will start a web UI at http://localhost:51204/__vitest__/. As with the console-based test runner, this will automatically reload with changes.
+
+To see code coverage statistics, run `pnpm run test:coverage`.
+
 ## TODO:
 
 - Another version that has state management
-- Add example tests
-- Add example files to implement the folder structure below
+- Add example files to fill out the folder structure below
 
 ## Folder Structure
 
